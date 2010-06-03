@@ -14,25 +14,15 @@
  * limitations under the License.
  */
 
+package griffon.lookandfeel.tonic
+
+import griffon.lookandfeel.AbstractLookAndFeelTestCase
+
 /**
  * @author Andres Almiray
  */
-class LookandfeelTonicGriffonPlugin {
-    def version = 0.1
-    def griffonVersion = '0.3.2 > *'
-    def dependsOn = [lookandfeel: 0.1]
-    def toolkits = ['swing']
-    def license = 'Apache Software License 2.0'
-
-    def author = 'Andres Almiray'
-    def authorEmail = 'aalmiray@users.sourceforge.net'
-    def title = 'Tonic Swing Look & Feel'
-    def description = '''
-Tonic Swing Look & Feel.
-http://www.digitprop.com/tonic/tonic.php
-'''
-
-    // URL to the plugin's documentation
-    def documentation = 'http://griffon.codehaus.org/Lookandfeel+Tonic+Plugin'
+class TonicLookAndFeelTests extends AbstractLookAndFeelTestCase {
+    void testTonicTonicLookAndFeel() {
+        setAndTestLookAndFeel('Tonic', 'Tonic')
+    }
 }
-
